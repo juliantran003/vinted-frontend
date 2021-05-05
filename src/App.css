@@ -1,6 +1,16 @@
+.flex {
+  display: flex;
+}
+
+/* Header */
+
 .logo-vinted {
   width: 100px;
 }
+
+/* Home */
+
+/* Item */
 
 .avatar {
   object-fit: cover;
@@ -31,4 +41,14 @@
 .offer-display {
   display: flex;
   width: 100%;
+}
+
+/* offer */
+
+.offer {
+  display: flex;
+}
+
+.offer-description {
+  border: black solid 2px;
 }
