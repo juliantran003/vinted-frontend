@@ -8,16 +8,17 @@ const Offer = ({ data }) => {
     <div>
       <Header />
 
-      {data.map((offers, index) => {
-        return (
-          <img
-            src={offers.product_pictures.map((product_pictures, index) => {
-              return product_pictures.url;
-            })}
-            alt=""
-          />
-        );
-      })}
+      {id === offers._id &&
+        data.map((offers, index) => {
+          return (
+            <img
+              src={offers.product_pictures.map((product_pictures, index) => {
+                return product_pictures.url;
+              })}
+              alt=""
+            />
+          );
+        })}
     </div>
   );
 };
