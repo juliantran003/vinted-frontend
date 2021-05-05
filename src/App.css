@@ -42,7 +42,19 @@ body {
   border-radius: 5px;
   width: 632px;
   margin: 5px 0;
+  margin-left: 5px;
   padding: 8px 5px;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.header-input {
+  background-color: #f5f6f7;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 .header button {

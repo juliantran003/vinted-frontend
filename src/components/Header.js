@@ -7,7 +7,11 @@ const Header = (props) => {
       <Link to="/">
         <img src={logo} alt={logo} className="logo-vinted" />
       </Link>
-      <input type="text" placeholder="Rechercher des articles" />
+      <div className="header-input">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Rechercher des articles" />
+      </div>
+
       <div>
         <button>S'inscrire</button>
         <button>Se connecter</button>
