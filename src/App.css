@@ -159,6 +159,7 @@ body {
 }
 
 .product {
+  object-fit: cover;
   width: 235px;
   height: 360px;
 }
