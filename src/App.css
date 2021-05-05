@@ -20,3 +20,15 @@
   width: 100vw;
   flex-wrap: wrap;
 }
+
+.hero {
+  width: 100vw;
+  height: 600px;
+  background-image: url("./img/hero-background.jpg");
+  background-size: cover;
+}
+
+.offer-display {
+  display: flex;
+  width: 100%;
+}

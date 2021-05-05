@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
-const Offer = (props) => {
+const Offer = ({ data }) => {
   return (
     <div>
       <Header />
-      <Link to="/">Home</Link>
+      {data.map((offers, index) => {
+        <div className="offer-display">
+          <img src={offers.product_pictures.url} alt="" />
+          <div>{offers.product_price.toFixed(2)}</div>
+        </div>;
+      })}
     </div>
   );
 };
