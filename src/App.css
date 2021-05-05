@@ -1,1 +1,22 @@
-/* Other rules */
+.logo-vinted {
+  width: 100px;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.product {
+  object-fit: cover;
+  width: 235px;
+  height: 428px;
+}
+
+.all-items {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+}
