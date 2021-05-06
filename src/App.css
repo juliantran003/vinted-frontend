@@ -69,6 +69,12 @@ body {
   background-color: white;
   width: 140px;
   margin-right: 15px;
+  opacity: 80%;
+}
+
+.header button:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 #disconnect {
@@ -80,6 +86,14 @@ body {
   margin-right: 15px;
 }
 
+#disconnect:hover {
+  border: solid 1px #c2185a;
+
+  color: #c2185a;
+  background-color: white;
+  cursor: pointer;
+}
+
 #sell {
   margin-right: 0px;
   border: solid 1px #2cb1ba;
@@ -87,6 +101,12 @@ body {
   color: white;
   background-color: #2cb1ba;
   padding: 5px 10px;
+  opacity: 80%;
+}
+
+#sell:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 /* Home */
@@ -127,7 +147,12 @@ body {
   font-size: 16px;
   border: none;
   padding: 0 14px;
+  opacity: 80%;
   margin-top: 32px;
+}
+.hero-message button:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 .hero img {
@@ -148,6 +173,7 @@ body {
 }
 
 .individual-items {
+  border-radius: 5px;
   margin: 5px 10px;
 }
 
@@ -210,6 +236,12 @@ body {
   color: white;
   background-color: #2cb1ba;
   height: 36px;
+  opacity: 80%;
+}
+
+.offer button:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 .offer-box {
@@ -284,7 +316,7 @@ body {
   margin-bottom: 15px;
 }
 
-.form-container input {
+.form-container > input {
   width: 100%;
   border: none;
   border-bottom: solid grey 1px;
@@ -303,15 +335,43 @@ body {
   height: 36px;
   width: 100%;
   margin: 20px 0 10px 0;
+  opacity: 80%;
+}
+
+.form-container button:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.newsletter {
+  margin-top: 30px;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+}
+
+.newsletter p {
+  color: grey;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.terms {
+  font-size: 10px;
+  color: lightgrey;
+  margin-top: 5px;
 }
 
 .link-login-signup {
-  font-size: 12px;
+  font-size: 10px;
   color: #2cb1ba;
   text-decoration: none;
 }
 
 .link-login-signup:hover {
   color: #2cb1ba;
-  text-decoration: none;
+  text-decoration: underline;
 }

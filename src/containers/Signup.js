@@ -50,6 +50,16 @@ const Signup = ({ setUser, userToken }) => {
           placeholder="Mot de passe"
           onChange={(event) => setPassword(event.target.value)}
         />
+        <div class="newsletter">
+          <input type="checkbox" />
+          <p>S'inscrire à notre newsletter</p>
+        </div>
+        <p className="terms">
+          En m'inscrivant je confirme avoir lu et accepté les Termes &
+          Conditions et Politique de Cofidentialité de Vinted. Je confirme avoir
+          au moins 18 ans.
+        </p>
+
         <button type="submit">S'inscrire</button>
         <Link className="link-login-signup" to="/login">
           <p>Tu as déjà un compte ? Connecte-toi !</p>
