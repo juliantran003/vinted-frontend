@@ -20,7 +20,7 @@ const Login = ({ setUser }) => {
         setUser(token);
         history.push("/");
       } else {
-        console.log("pas de token, pas d'authentification"); //ne
+        console.log("No token");
       }
     } catch (error) {
       console.log(error.message);
