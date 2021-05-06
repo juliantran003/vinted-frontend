@@ -1,12 +1,26 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home";
 import Offer from "./containers/Offer";
+import Signup from "./containers/Signup";
+import Login from "./containers/Login";
+import Cookies from "js-cookie";
 
 function App() {
+  const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
+
+  const setUser = (token) => {
+    if (token) {
+      Cookies.set("userToken", token, { expires: 1 });
+      setUserToken(token);
+    } else {
+      Cookies.remove("userToken");
+      setUserToken(null);
+    }
+  };
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,9 +43,16 @@ function App() {
     <span>Loading...</span>
   ) : (
     <Router>
+      <Header userToken={userToken} setUser={setUser} />
       <Switch>
         <Route path="/offer/:id">
           <Offer data={data.offers} />
+        </Route>
+        <Route path="/signup">
+          <Signup setUser={setUser} />
+        </Route>
+        <Route path="/login">
+          <Login setUser={setUser} />
         </Route>
         <Route path="/">
           <Home data={data} />

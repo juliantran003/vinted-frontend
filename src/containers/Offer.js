@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import { useParams } from "react-router-dom";
 
 const Offer = ({ data }) => {
@@ -6,8 +5,6 @@ const Offer = ({ data }) => {
 
   return (
     <div>
-      <Header />
-
       {data.map((offers, index) => {
         return (
           id === offers._id && (
