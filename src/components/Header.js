@@ -13,7 +13,9 @@ const Header = ({ userToken, setUser }) => {
       </div>
 
       {userToken ? (
-        <button onClick={() => setUser(null)}>Se déconnecter</button>
+        <button id="disconnect" onClick={() => setUser(null)}>
+          Se déconnecter
+        </button>
       ) : (
         <>
           <Link to="/signup">
@@ -24,8 +26,9 @@ const Header = ({ userToken, setUser }) => {
           </Link>
         </>
       )}
-
-      <button id="sell">Vends tes articles</button>
+      <div>
+        <button id="sell">Vends tes articles</button>
+      </div>
     </div>
   );
 };

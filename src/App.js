@@ -49,7 +49,7 @@ function App() {
           <Offer data={data.offers} />
         </Route>
         <Route path="/signup">
-          <Signup setUser={setUser} />
+          <Signup setUser={setUser} userToken={userToken} />
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />

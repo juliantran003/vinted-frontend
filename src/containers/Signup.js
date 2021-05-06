@@ -3,10 +3,11 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Signup = ({ setUser }) => {
+const Signup = ({ setUser, userToken }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const history = useHistory();
 
   const handleSubmit = async (event) => {
@@ -20,8 +21,8 @@ const Signup = ({ setUser }) => {
         password: password,
       }
     );
-    console.log(response.data);
     const token = response.data.token;
+
     setUser(token);
     history.push("/");
   };
@@ -30,6 +31,7 @@ const Signup = ({ setUser }) => {
     <div>
       <form className="form-container" onSubmit={handleSubmit}>
         <h1>S'inscrire</h1>
+
         <input
           type="text"
           value={username}
