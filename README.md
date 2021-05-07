@@ -1,1 +1,1 @@
-[Netlify](https://goofy-meitner-5e82d7.netlify.app/)
+[Netlify](https://practical-fermi-edf0d6.netlify.app/)
