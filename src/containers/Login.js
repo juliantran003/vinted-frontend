@@ -18,7 +18,7 @@ const Login = ({ setUser }) => {
       const token = response.data.token;
       if (token) {
         setUser(token);
-        history.push("/");
+        history.push("/publish");
       } else {
         console.log("No token");
       }
