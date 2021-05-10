@@ -375,3 +375,22 @@ body {
   color: #2cb1ba;
   text-decoration: underline;
 }
+
+/* Publish */
+
+.dropzone {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: grey;
+  font-size: 14px;
+  padding: 10px;
+  border: grey solid 1px;
+  border-radius: 5px;
+}
+
+.form-container h3 {
+  margin-top: 10px;
+}

@@ -9,7 +9,11 @@ const Item = ({ data }) => {
             <div className="user">
               <img
                 className="avatar"
-                src={offers.owner.account.avatar.url}
+                src={
+                  offers.owner.account.avatar === undefined
+                    ? ""
+                    : offers.owner.account.avatar.url
+                }
                 alt=""
               />
               {offers.owner.account.username}

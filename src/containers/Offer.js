@@ -14,7 +14,9 @@ const Offer = ({ data }) => {
                   className="product-offer"
                   src={offers.product_pictures.map(
                     (product_pictures, index) => {
-                      return product_pictures.url;
+                      return product_pictures.url
+                        ? product_pictures.url
+                        : product_pictures.secure_url;
                     }
                   )}
                   alt=""
@@ -68,7 +70,11 @@ const Offer = ({ data }) => {
                     <div className="user-offer">
                       <img
                         className="avatar-offer"
-                        src={offers.owner.account.avatar.url}
+                        src={
+                          offers.owner.account.avatar === undefined
+                            ? ""
+                            : offers.owner.account.avatar.url
+                        }
                         alt=""
                       />
                       {offers.owner.account.username}

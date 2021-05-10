@@ -26,6 +26,7 @@ const Login = ({ setUser }) => {
       console.log(error.message);
     }
   };
+
   return (
     <div>
       <form className="form-container" onSubmit={handleSubmit}>
