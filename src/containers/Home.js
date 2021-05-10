@@ -1,5 +1,6 @@
 import Item from "../components/Item";
 import ripped from "../img/ripped.svg";
+import { Link } from "react-router-dom";
 
 const Home = ({ data }) => {
   return (
@@ -7,7 +8,9 @@ const Home = ({ data }) => {
       <div className="hero">
         <div className="hero-message">
           <h1>Prêts à faire du tri dans vos placards ?</h1>
-          <button>Commencer à vendre</button>
+          <Link to="/publish">
+            <button>Commencer à vendre</button>
+          </Link>
         </div>
         <img src={ripped} alt="" />
       </div>
