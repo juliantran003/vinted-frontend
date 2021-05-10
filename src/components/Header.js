@@ -27,7 +27,9 @@ const Header = ({ userToken, setUser }) => {
         </>
       )}
       <div>
-        <button id="sell">Vends tes articles</button>
+        <Link to="/publish">
+          <button id="sell">Vends tes articles</button>
+        </Link>
       </div>
     </div>
   );

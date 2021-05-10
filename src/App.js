@@ -7,6 +7,7 @@ import Home from "./containers/Home";
 import Offer from "./containers/Offer";
 import Signup from "./containers/Signup";
 import Login from "./containers/Login";
+import Publish from "./containers/Publish";
 import Cookies from "js-cookie";
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
         </Route>
         <Route path="/login">
           <Login setUser={setUser} />
+        </Route>
+        <Route path="/publish">
+          <Publish set={setUser} />
         </Route>
         <Route path="/">
           <Home data={data} />

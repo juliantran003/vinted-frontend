@@ -69,11 +69,11 @@ body {
   background-color: white;
   width: 140px;
   margin-right: 15px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .header button:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -101,11 +101,11 @@ body {
   color: white;
   background-color: #2cb1ba;
   padding: 5px 10px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 #sell:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -147,11 +147,11 @@ body {
   font-size: 16px;
   border: none;
   padding: 0 14px;
-  opacity: 80%;
+  opacity: 0.8;
   margin-top: 32px;
 }
 .hero-message button:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -236,11 +236,11 @@ body {
   color: white;
   background-color: #2cb1ba;
   height: 36px;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .offer button:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -335,11 +335,11 @@ body {
   height: 36px;
   width: 100%;
   margin: 20px 0 10px 0;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .form-container button:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
