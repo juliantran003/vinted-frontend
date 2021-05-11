@@ -6,6 +6,9 @@ import { Redirect } from "react-router-dom";
 const CheckoutForm = ({ amount, title, id }) => {
   const stripe = useStripe();
   const elements = useElements();
+  const protection = 0.4;
+  const port = 0.8;
+
   const [paymentState, setPaymentState] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -41,8 +44,21 @@ const CheckoutForm = ({ amount, title, id }) => {
       <form onSubmit={handleSubmit}>
         <h1>Paiement</h1>
         <div className="total">
-          <span>Total</span>
+          <span>Commande</span>
           <span>{amount} €</span>
+        </div>
+        <div className="total">
+          <span>Frais protection Acheteurs</span>
+          <span>{protection.toFixed(2)} €</span>
+        </div>
+        <div className="total">
+          <span>Frais de port</span>
+          <span>{port.toFixed(2)} €</span>
+        </div>
+        <div className="line"></div>
+        <div className="total">
+          <span>Total</span>
+          <span> {amount} €</span>
         </div>
         <div className="line"></div>
         <CardElement />
