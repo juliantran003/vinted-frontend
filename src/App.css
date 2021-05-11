@@ -402,6 +402,7 @@ body {
   width: 400px;
   margin: 30px auto;
   margin-bottom: 80px;
+  padding-bottom: 5px;
 }
 
 .form-container h3 {
