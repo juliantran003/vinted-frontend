@@ -51,67 +51,81 @@ const Publish = ({ userToken }) => {
   return (
     <div>
       {userToken ? (
-        <form className="form-container" onSubmit={handleSubmit}>
-          <h3>Title</h3>
-          <input
-            type="text"
-            placeholder="e.g. Zara denim trousers"
-            onChange={(event) => setTitle(event.target.value)}
-          />
-          <h3>Description</h3>
-          <input
-            type="text"
-            placeholder="e.g. Black jeans..."
-            onChange={(event) => setDescription(event.target.value)}
-          />
-          <h3>Price</h3>
-          <input
-            type="number"
-            placeholder="e.g. 25"
-            onChange={(event) => setPrice(event.target.value)}
-          />
-          <h3>Condition</h3>
-          <input
-            type="text"
-            placeholder="Used, new..."
-            onChange={(event) => setCondition(event.target.value)}
-          />
-          <h3>Brand</h3>
-          <input
-            type="text"
-            placeholder="Nike, Adidas..."
-            onChange={(event) => setBrand(event.target.value)}
-          />
-          <h3>Size</h3>
-          <input
-            type="number"
-            placeholder="e.g. 44"
-            onChange={(event) => setSize(event.target.value)}
-          />
-          <h3>Color</h3>
-          <input
-            type="text"
-            placeholder="e.g. Blue"
-            onChange={(event) => setColor(event.target.value)}
-          />
-          <h3>Picture</h3>
+        <div className="offer-body-2">
+          <div className="success-box">
+            <div className="publish">
+              <form className="form-container " onSubmit={handleSubmit}>
+                <h1>Publier une annonce</h1>
+                <h3>Titre</h3>
+                <input
+                  type="text"
+                  placeholder="ex : Pantalon Denim Zara"
+                  onChange={(event) => setTitle(event.target.value)}
+                />
+                <h3>Description</h3>
+                <input
+                  type="text"
+                  placeholder="ex : Jeans..."
+                  onChange={(event) => setDescription(event.target.value)}
+                />
+                <h3>Prix</h3>
+                <input
+                  type="number"
+                  placeholder="ex : 25"
+                  onChange={(event) => setPrice(event.target.value)}
+                />
+                <h3>État</h3>
+                <input
+                  type="text"
+                  placeholder="ex : Usé, neuf..."
+                  onChange={(event) => setCondition(event.target.value)}
+                />
+                <h3>Marque</h3>
+                <input
+                  type="text"
+                  placeholder="ex: Nike, Adidas..."
+                  onChange={(event) => setBrand(event.target.value)}
+                />
+                <h3>Taille</h3>
+                <input
+                  type="number"
+                  placeholder="ex : 44"
+                  onChange={(event) => setSize(event.target.value)}
+                />
+                <h3>Couleur</h3>
+                <input
+                  type="text"
+                  placeholder="ex : Bleu"
+                  onChange={(event) => setColor(event.target.value)}
+                />
+                <h3>Image</h3>
 
-          <Dropzone onDrop={(acceptedFiles) => console.log(acceptedFiles)}>
-            {({ getRootProps, getInputProps }) => (
-              <section>
-                <div {...getRootProps()} className="dropzone">
-                  <input
-                    {...getInputProps()}
-                    onChange={(event) => setPicture(event.target.files[0])}
-                  />
-                  <p>Drag 'n' drop some files here, or click to select files</p>
-                </div>
-              </section>
-            )}
-          </Dropzone>
+                <Dropzone
+                  onDrop={(acceptedFiles) => console.log(acceptedFiles)}
+                >
+                  {({ getRootProps, getInputProps }) => (
+                    <section>
+                      <div {...getRootProps()} className="dropzone">
+                        <input
+                          {...getInputProps()}
+                          onChange={(event) =>
+                            setPicture(event.target.files[0])
+                          }
+                        />
+                        <p>
+                          Drag 'n' drop some files here, or click to select
+                          files
+                        </p>
+                      </div>
+                    </section>
+                  )}
+                </Dropzone>
 
-          <button type="submit">Publier</button>
-        </form>
+                <button type="submit">Publier</button>
+              </form>
+            </div>
+          </div>
+        </div>
       ) : (
         <Redirect to="/login" />
       )}

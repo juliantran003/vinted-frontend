@@ -1,24 +1,72 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+import black from "../img/black.jpg";
 
-const Offer = ({ data }) => {
+const Offer = () => {
   const { id } = useParams();
+  const history = useHistory();
 
-  return (
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      history.push("/payment", {
+        title: data.offers.map((offers, index) => {
+          return id === offers._id && offers.product_name;
+        }),
+        amount: data.offers.map((offers, index) => {
+          return id === offers._id && offers.product_price.toFixed(2);
+        }),
+        id: id,
+      });
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const [data, setData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://lereacteur-vinted-api.herokuapp.com/offers"
+        );
+
+        setData(response.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    fetchData();
+  }, []);
+
+  return isLoading ? (
+    <span>Loading...</span>
+  ) : (
     <div>
-      {data.map((offers, index) => {
+      {data.offers.map((offers, index) => {
         return (
           id === offers._id && (
             <div className="offer-body">
               <div className="offer">
                 <img
                   className="product-offer"
-                  src={offers.product_pictures.map(
-                    (product_pictures, index) => {
-                      return product_pictures.url
-                        ? product_pictures.url
-                        : product_pictures.secure_url;
-                    }
-                  )}
+                  src={
+                    offers.product_image.url
+                      ? offers.product_image.url
+                      : offers.product_pictures.map(
+                          (product_pictures, index) => {
+                            return product_pictures.url
+                              ? product_pictures.url
+                              : product_pictures.secure_url;
+                          }
+                        )
+                  }
                   alt=""
                 />
                 <div className="offer-box">
@@ -72,14 +120,15 @@ const Offer = ({ data }) => {
                         className="avatar-offer"
                         src={
                           offers.owner.account.avatar === undefined
-                            ? ""
+                            ? black
                             : offers.owner.account.avatar.url
                         }
                         alt=""
                       />
                       {offers.owner.account.username}
                     </div>
-                    <button>Acheter</button>
+
+                    <button onClick={handleSubmit}>Acheter</button>
                   </div>
                 </div>
               </div>

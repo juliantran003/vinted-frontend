@@ -15,7 +15,7 @@ const Home = ({ data }) => {
         <img src={ripped} alt="" />
       </div>
 
-      <Item data={data.offers} />
+      <Item />
     </div>
   );
 };
