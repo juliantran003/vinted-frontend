@@ -40,6 +40,11 @@ const CheckoutForm = ({ amount, title, id }) => {
     <div className="payment-container">
       <form onSubmit={handleSubmit}>
         <h1>Paiement</h1>
+        <div className="total">
+          <span>Total</span>
+          <span>{amount} €</span>
+        </div>
+        <div className="line"></div>
         <CardElement />
         <input type="submit" value="Payer" />
       </form>

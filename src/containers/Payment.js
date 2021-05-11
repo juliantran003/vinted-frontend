@@ -18,6 +18,7 @@ const Payment = ({ userToken }) => {
               <h1>Récapitulatif de commande</h1>
               <p>{title}</p>
               <p>{amount} €</p>
+              <p>Paiement par Carte Bancaire</p>
             </div>
             <Elements stripe={stripePromise}>
               <CheckoutForm title={title} amount={amount} id={id} />
